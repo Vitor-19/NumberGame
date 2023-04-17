@@ -1,1 +1,1 @@
- O computador vai escolher um número de 0 a 100, seu objetivo é descobrir o mesmo, para isso selecione um número e siga as instruções que aparecerão na aba de mensagens "...", assim que acertar, clique no botão abaixo de "reiniciar" para o computador escolher outro número.# NumberGame
+ O computador vai escolher um número de 0 a 100, seu objetivo é descobrir o mesmo, para isso selecione um número e siga as instruções que aparecerão na aba de mensagens "...", assim que acertar, clique no botão abaixo de "reiniciar" para o computador escolher outro número.
