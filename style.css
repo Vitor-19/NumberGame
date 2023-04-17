@@ -1,0 +1,80 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+#TextoTerminal {
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+}
+#numero {
+    box-shadow: 2px #41644A ;
+    text-align: center;
+    display: block;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:26px ;
+    width: 64px ;
+    height: 32px;
+    border-radius: 50px;
+    border: 2px solid black;
+
+}
+#reiniciar-box {
+    align-items: center;
+    justify-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 5px;
+}
+#reiniciar-text {
+
+    font-size: 10px;
+    font-family: 'Press Start 2P';
+
+
+}
+#reiniciar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+#mensagens {
+    border: 3px solid black;
+    background-color: darkgrey;
+    padding: 20px;
+    border-radius: 25px;
+    margin: 35px 0;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive ;
+	}
+#principal {
+    background-color: #41644A ;
+    align-items: stretch;
+    height: 750px;
+    }
+#enviar {
+    font-size: 10px;
+    font-family: 'Press Start 2P';
+    background-color: darkgrey ;
+    border: 2px solid black;
+    border-radius: 10px 0;
+    height: 32px;
+    width: 96px;
+}
+#box-enviar {
+    margin: 2px;
+    width: 100px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #41644A ;
+}

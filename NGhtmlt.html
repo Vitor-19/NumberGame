@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Number Game</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body id="principal">
+	<div>
+	   <div id="TextoTerminal"> <label for="numero"> Tente adivinhar o número que o computador está pensando de 0 a 100, você tem: <div id="tentativas">  </div> </label> 
+	      <div> <input type="Number" id="numero" name="numero" min="0" max="100"> 
+	      </div>
+	  </div>
+	<div id="box-enviar"> <input type="submit" id="enviar" name="Enviar">
+	<div id="reiniciar-box"> <label id="reiniciar-text" for="Reiniciar">Reiniciar</label> <input type="button" id="reiniciar" name="Reiniciar"> </div>
+	</div>
+	<div id="mensagens">...</div>
+</div>
+<script>
+		var botaoReiniciar = document.getElementById("reiniciar");
+		botaoReiniciar.addEventListener("click", function() {
+    	location.reload();
+		});
+
+
+		var numeroAdivinhar = Math.floor(Math.random() * 101);
+
+		var inputNumero = document.getElementById("numero");
+		var botaoEnviar = document.getElementById("enviar");
+		var divMensagens = document.getElementById("mensagens");
+		var divTentativas = document.getElementById("tentativas");
+
+		var maxTentativas = 15;
+
+		var numTentativas = 0;
+
+		function verificarNumero() {
+		
+			var numeroEscolhido = parseInt(inputNumero.value);
+
+			if (numeroEscolhido == numeroAdivinhar) {
+				divMensagens.innerHTML = " Você conseguiu! Acertou o número em " + numTentativas + " tentativas!";
+			}
+			else if (numeroEscolhido > numeroAdivinhar) {
+				divMensagens.innerHTML = "O número é menor.";
+			} else {
+				divMensagens.innerHTML = "O número é maior.";
+			}
+
+			numTentativas++;
+
+			var tentativasRestantes = maxTentativas - numTentativas
+
+			  if (tentativasRestantes > 0) {
+                divTentativas.innerHTML = tentativasRestantes + " tentativas restantes!";
+            } else {
+                divMensagens.innerHTML = "Você excedeu o número máximo de tentativas. O número era: " + numeroAdivinhar;
+                	inputNumero.disabled = true;
+					botaoEnviar.disabled = true;
+            }
+            inputNumero.value = "";
+			inputNumero.focus();
+        }
+
+
+		
+
+		botaoEnviar.addEventListener("click", verificarNumero);
+		
+		
+</script>
+
+
+	
+</body>
+</html>
